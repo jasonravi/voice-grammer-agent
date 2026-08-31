@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <title>AI English Speaking Tutor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/styles.css?v=20" />
+</head>
+<body>
+  <div class="device">
+    <div class="app" id="appShell" data-flow="onboard">
+
+      <section class="screen on" data-screen="welcome">
+        <div class="hero-art">
+          <img src="/static/avatars/maya.png?v=9" alt="Maya" />
+        </div>
+        <div class="welcome-copy">
+          <p class="kicker">AI English Tutor</p>
+          <h1>Your AI English Tutor & Speaking Companion</h1>
+          <p class="lede">Practice speaking, get real-time feedback, and become confident in English.</p>
+        </div>
+        <div class="dots"><i class="on"></i><i></i><i></i></div>
+        <button class="btn primary" id="getStarted" type="button">Get Started</button>
+        <button class="btn ghost" id="haveAccount" type="button">I already have an account</button>
+      </section>
+
+      <section class="screen" data-screen="level">
+        <p class="step">2 · Level Selection</p>
+        <h1>What's your English level?</h1>
+        <p class="lede">This helps us personalise your learning experience.</p>
+        <div class="choice-list" id="levelList">
+          <button class="choice on" data-level="beginner" type="button"><b>Beginner</b><span>I'm just starting to learn</span></button>
+          <button class="choice" data-level="intermediate" type="button"><b>Intermediate</b><span>I can have basic conversations</span></button>
+          <button class="choice" data-level="advanced" type="button"><b>Advanced</b><span>I can speak fluently</span></button>
+          <button class="choice" data-level="proficient" type="button"><b>Proficient</b><span>I'm almost a native speaker</span></button>
+        </div>
+        <button class="btn primary" data-next="goal" type="button">Continue</button>
+      </section>
+
+      <section class="screen" data-screen="goal">
+        <p class="step">3 · Goal Selection</p>
+        <h1>What's your main goal?</h1>
+        <p class="lede">We will design lessons based on your goal.</p>
+        <div class="choice-list" id="goalList">
+          <button class="choice on" data-goal="speak" data-mode="free" type="button"><b>Speak Confidently</b><span>Daily conversation practice</span></button>
+          <button class="choice" data-goal="interview" data-mode="interview" type="button"><b>Interview Preparation</b><span>Job interviews and STAR answers</span></button>
+          <button class="choice" data-goal="career" data-mode="workplace" type="button"><b>Career Growth</b><span>Meetings and workplace English</span></button>
+          <button class="choice" data-goal="travel" data-mode="travel" type="button"><b>Travel</b><span>Airports, hotels, and directions</span></button>
+          <button class="choice" data-goal="study" data-mode="daily" type="button"><b>Study Abroad</b><span>Campus and everyday English</span></button>
+          <button class="choice" data-goal="other" data-mode="free" type="button"><b>Other</b><span>I'll explore as I go</span></button>
+        </div>
+        <button class="btn primary" data-next="daily" type="button">Continue</button>
+      </section>
+
+      <section class="screen" data-screen="daily">
+        <p class="step">4 · Daily Goal</p>
+        <h1>Set your daily goal</h1>
+        <p class="lede">Consistency is the secret.</p>
+        <div class="dial">
+          <svg viewBox="0 0 120 120" aria-hidden="true">
+            <circle cx="60" cy="60" r="52" class="dial-track" />
+            <circle cx="60" cy="60" r="52" class="dial-value" id="dialArc" />
+          </svg>
+          <div class="dial-copy">
+            <strong id="dailyValue">15</strong>
+            <span>minutes</span>
+          </div>
+        </div>
+        <input id="dailyRange" type="range" min="5" max="60" step="5" value="15" />
+        <p class="range-labels"><span>5 min</span><span>60 min</span></p>
+        <button class="btn primary" id="letsBegin" type="button">Let's Begin</button>
+      </section>
+
+      <section class="screen" data-screen="home">
+        <header class="home-head">
+          <div>
+            <p class="hello" id="homeHello">Good morning, Ravi 👋</p>
+            <p class="lede" id="homeSub">Keep it up, you're doing great.</p>
+          </div>
+          <button class="bell" data-go="profile" type="button" aria-label="Profile">☺</button>
+        </header>
+        <article class="progress-card">
+          <div>
+            <p>Your Progress</p>
+            <strong id="homeProgress">0%</strong>
+          </div>
+          <div class="trophy" aria-hidden="true">🏆</div>
+        </article>
+        <div class="section-row">
+          <h2>Today's Plan</h2>
+          <button class="text-link" data-go="progress" type="button">View all</button>
+        </div>
+        <div class="plan-list">
+          <button class="plan" data-launch="free" type="button"><span>🎤</span><div><b>Speaking Practice</b><small>Voice conversation with Maya</small></div></button>
+          <button class="plan" data-launch="interview" type="button"><span>💼</span><div><b>Interview Practice</b><small>Job interview simulation</small></div></button>
+          <button class="plan" data-launch="free" type="button"><span>🗣️</span><div><b>Free Conversation</b><small>Talk about anything</small></div></button>
+          <button class="plan" data-launch="vocabulary" type="button"><span>📚</span><div><b>Vocabulary</b><small>Learn and use new words</small></div></button>
+          <button class="plan" data-launch="grammar" type="button"><span>🎯</span><div><b>Grammar</b><small>Tense, articles, structure</small></div></button>
+        </div>
+        <article class="goal-card">
+          <p>Today's Goal</p>
+          <b id="homeGoal">15 min speaking practice</b>
+        </article>
+      </section>
+
+      <section class="screen" data-screen="tutor">
+        <header class="tutor-head">
+          <button class="icon-btn" id="tutorBack" type="button" aria-label="Back">‹</button>
+          <div>
+            <p class="kicker">AI Tutor</p>
+            <h1 id="tutorName">Maya</h1>
+          </div>
+          <p class="online" id="status">Online</p>
+        </header>
+        <section class="stage" id="stage">
+          <div class="spot" aria-hidden="true"></div>
+          <div id="avatarRoot" class="avatar-root" data-avatar="maya" data-state="idle" data-expression="happy"></div>
+          <div class="wave" id="wave" aria-hidden="true"></div>
+        </section>
+        <div class="chat" id="chatLog"></div>
+        <p class="caption" id="caption">Tell me about your current job.</p>
+        <p class="hindi-line" id="hindiLine" hidden></p>
+        <p class="live-user" id="liveUser"></p>
+        <div class="mic-row">
+          <p class="listen-hint" id="listenHint">Tap to speak</p>
+          <button id="talk" class="mic" type="button" aria-label="Speak">
+            <span class="mic-dot"></span>
+          </button>
+        </div>
+      </section>
+
+      <section class="screen" data-screen="correction">
+        <p class="kicker">Real-time Correction</p>
+        <h1>Correction</h1>
+        <article class="fix-card bad">
+          <p>Your sentence</p>
+          <b id="fixOriginal">—</b>
+        </article>
+        <article class="fix-card good">
+          <p>Corrected sentence</p>
+          <b id="fixCorrected">—</b>
+        </article>
+        <article class="fix-why">
+          <p><b>Why?</b></p>
+          <p id="fixWhy">We use past tense for actions that already happened.</p>
+          <p id="fixHindi" class="hindi-line" hidden></p>
+          <p id="fixTip"></p>
+        </article>
+        <button class="btn primary" id="gotIt" type="button">Got it!</button>
+      </section>
+
+      <section class="screen" data-screen="result">
+        <p class="kicker">Conversation Result</p>
+        <h1 id="resultTitle">Great job!</h1>
+        <p class="lede">You completed a conversation.</p>
+        <div class="overall">
+          <strong id="resultOverall">0%</strong>
+          <span>Overall Score</span>
+        </div>
+        <div class="skill-rows" id="resultSkills"></div>
+        <div class="split">
+          <article>
+            <h3>New words learned</h3>
+            <ul id="resultWords"></ul>
+          </article>
+          <article>
+            <h3>Mistakes to practice</h3>
+            <ul id="resultMistakes"></ul>
+          </article>
+        </div>
+        <button class="btn primary" id="viewDetails" type="button">View Details</button>
+        <button class="btn ghost" data-go="home" type="button">Back to Home</button>
+      </section>
+
+      <section class="screen" data-screen="progress">
+        <h1>My Progress</h1>
+        <article class="level-card">
+          <p>English Level</p>
+          <b id="levelPath">A2 → B1</b>
+        </article>
+        <div class="skill-rows" id="progressSkills"></div>
+        <div class="stat-row">
+          <article><b id="streakDays">0</b><span>Day streak</span></article>
+          <article><b id="chatCount">0</b><span>Conversations</span></article>
+        </div>
+      </section>
+
+      <section class="screen" data-screen="vocab">
+        <h1>Vocabulary</h1>
+        <article class="word-card">
+          <p>Word of the Day</p>
+          <b id="wordOfDay">Articulate</b>
+          <small>/ɑːˈtɪkjʊleɪt/</small>
+          <p id="wordDef">Able to express your ideas clearly and effectively.</p>
+        </article>
+        <h3>Recently Learned</h3>
+        <ul class="word-list" id="wordList"></ul>
+      </section>
+
+      <section class="screen" data-screen="profile">
+        <h1>Profile</h1>
+        <article class="profile-card">
+          <img src="/static/avatars/maya.png?v=9" alt="" />
+          <div>
+            <b id="profileName">Ravi</b>
+            <small id="profileMeta">Intermediate · Speak Confidently</small>
+          </div>
+        </article>
+        <label class="field">Name
+          <input id="nameInput" maxlength="24" />
+        </label>
+        <button class="row-btn" data-go="progress" type="button">Learning progress</button>
+        <button class="row-btn" id="end" type="button">End current session</button>
+        <button class="row-btn ghost" id="resetOnboard" type="button">Restart onboarding</button>
+      </section>
+
+      <nav class="tabbar" id="tabbar">
+        <button class="tab on" data-tab="home" type="button"><span>⌂</span>Home</button>
+        <button class="tab" data-tab="progress" type="button"><span>📈</span>Progress</button>
+        <button class="tab talk-tab" data-tab="tutor" type="button" id="homeMic" aria-label="Speak with Maya"><span>🎤</span></button>
+        <button class="tab" data-tab="vocab" type="button"><span>📚</span>Learn</button>
+        <button class="tab" data-tab="profile" type="button"><span>☺</span>Profile</button>
+      </nav>
+    </div>
+  </div>
+
+  <audio id="player"></audio>
+  <script src="/static/avatar.js?v=9"></script>
+  <script src="/static/app.js?v=20"></script>
+</body>
+</html>
