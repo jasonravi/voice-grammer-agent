@@ -4,11 +4,9 @@ Voice-first English practice with a live tutor. Speak or type. Maya listens, tal
 
 **Practice speaking → get real-time feedback → become confident in English.**
 
-<p align="center">
-  <img src="docs/screenshots/01-onboarding.png" width="220" alt="Onboarding — Your AI English Tutor and Speaking Companion" />
-  <img src="docs/screenshots/04-tutor.png" width="220" alt="Maya listening for voice practice" />
-  <img src="docs/screenshots/03-home.png" width="220" alt="Home dashboard with today's plan" />
-</p>
+| Onboarding | Voice tutor | Home |
+| :---: | :---: | :---: |
+| ![Onboarding](./screenshots/01-onboarding.png) | ![Maya listening](./screenshots/04-tutor.png) | ![Home dashboard](./screenshots/03-home.png) |
 
 ---
 
@@ -26,18 +24,15 @@ Built for learners who can study English but freeze when they have to speak: int
 
 OTP login (demo code `123456`), then set your level and daily goal.
 
-<p align="center">
-  <img src="docs/screenshots/02-otp.png" width="220" alt="OTP verification" />
-  <img src="docs/screenshots/11-settings.png" width="220" alt="Learning settings — beginner to proficient" />
-</p>
+| OTP | Learning settings |
+| :---: | :---: |
+| ![OTP verification](./screenshots/02-otp.png) | ![Learning settings](./screenshots/11-settings.png) |
 
 ### Home — today's plan
 
 A personalized dashboard with speaking practice, interview simulation, free conversation, vocabulary, and grammar. Daily goal sits at the bottom so the next session is one tap.
 
-<p align="center">
-  <img src="docs/screenshots/03-home.png" width="240" alt="Home — Today's Plan" />
-</p>
+![Home — Today's Plan](./screenshots/03-home.png)
 
 | Plan | What you practice |
 | --- | --- |
@@ -51,29 +46,25 @@ A personalized dashboard with speaking practice, interview simulation, free conv
 
 Tap the mic to speak, or switch to the keyboard. Maya greets you in English and Hindi, stays online for the session, and coaches in the same turn — for example, when you say *I am*, she can nudge you toward the more natural *I'm*.
 
-<p align="center">
-  <img src="docs/screenshots/04-tutor.png" width="220" alt="Voice session with Maya" />
-  <img src="docs/screenshots/05-chat.png" width="220" alt="Chat with live grammar coaching" />
-</p>
+| Voice | Chat coaching |
+| :---: | :---: |
+| ![Voice session with Maya](./screenshots/04-tutor.png) | ![Chat with live grammar coaching](./screenshots/05-chat.png) |
 
 ### Progress, words, and a daily challenge
 
 After sessions you see CEFR-style level progress (B1 → B2), skill bars for speaking, grammar, vocabulary, and pronunciation, plus streak and conversation count. Learn has a word of the day with IPA and playback. Challenge is a 2-minute speaking task Maya scores for fluency and grammar.
 
-<p align="center">
-  <img src="docs/screenshots/06-progress.png" width="200" alt="My Progress" />
-  <img src="docs/screenshots/07-vocabulary.png" width="200" alt="Vocabulary — word of the day" />
-  <img src="docs/screenshots/08-challenge.png" width="200" alt="Daily Challenge" />
-</p>
+| Progress | Vocabulary | Daily challenge |
+| :---: | :---: | :---: |
+| ![My Progress](./screenshots/06-progress.png) | ![Vocabulary](./screenshots/07-vocabulary.png) | ![Daily Challenge](./screenshots/08-challenge.png) |
 
 ### Profile and plans
 
 Account, learning settings, help, and invite a friend. Freemium billing in INR: **Basic** (₹0, 5 conversations / day) and **Premium** (₹299 / month, unlimited conversations, advanced feedback, vocabulary builder, grammar tips). Yearly saves 20%.
 
-<p align="center">
-  <img src="docs/screenshots/09-profile.png" width="220" alt="Profile" />
-  <img src="docs/screenshots/10-plans.png" width="220" alt="Subscription plans" />
-</p>
+| Profile | Plans |
+| :---: | :---: |
+| ![Profile](./screenshots/09-profile.png) | ![Subscription plans](./screenshots/10-plans.png) |
 
 ---
 
